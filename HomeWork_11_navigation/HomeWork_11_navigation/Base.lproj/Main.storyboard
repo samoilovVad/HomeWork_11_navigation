@@ -30,17 +30,40 @@
                                 <state key="normal" title="Edit data with property">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hp-ZY-A3U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45O-nI-Kge">
+                                <rect key="frame" x="30" y="536" width="330" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit with segue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ZAP-gg-65H" kind="show" identifier="toEditScreen" id="rhX-bB-S74"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
+                            <constraint firstItem="45O-nI-Kge" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="D4J-hw-DPj"/>
                             <constraint firstItem="Hcm-nY-HO0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="OAg-eG-oRk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="45O-nI-Kge" secondAttribute="trailing" constant="30" id="SIf-3g-ChC"/>
                             <constraint firstItem="Pfr-aY-CPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9e-JB-Y9v"/>
                             <constraint firstItem="Hcm-nY-HO0" firstAttribute="top" secondItem="Pfr-aY-CPj" secondAttribute="bottom" constant="30" id="i2o-3f-PLl"/>
+                            <constraint firstItem="45O-nI-Kge" firstAttribute="top" secondItem="Hcm-nY-HO0" secondAttribute="bottom" constant="30" id="mEX-NL-ZFe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hcm-nY-HO0" secondAttribute="trailing" constant="30" id="prs-tD-skS"/>
                             <constraint firstItem="Pfr-aY-CPj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qXe-iv-lMY"/>
                         </constraints>
@@ -74,8 +97,29 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Save data with property">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveDataWithProperty:" destination="ZAP-gg-65H" eventType="touchUpInside" id="TLZ-hf-yLf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-IQ-pEf">
+                                <rect key="frame" x="30" y="537" width="330" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save with unwind">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="fwg-et-4AC" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="FzS-WL-K2c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,12 +128,15 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rGs-5l-ZSF" firstAttribute="trailing" secondItem="OZs-Sg-5f1" secondAttribute="trailing" constant="30" id="0d8-gP-LOS"/>
+                            <constraint firstItem="O1i-IQ-pEf" firstAttribute="leading" secondItem="rGs-5l-ZSF" secondAttribute="leading" constant="30" id="CBD-S4-8ZI"/>
                             <constraint firstItem="l4e-KL-sTa" firstAttribute="top" secondItem="OZs-Sg-5f1" secondAttribute="bottom" constant="30" id="LQi-2b-mDj"/>
                             <constraint firstItem="OZs-Sg-5f1" firstAttribute="leading" secondItem="rGs-5l-ZSF" secondAttribute="leading" constant="30" id="Tzd-vg-ifA"/>
                             <constraint firstItem="OZs-Sg-5f1" firstAttribute="centerX" secondItem="ZrI-SF-drS" secondAttribute="centerX" id="cf1-KB-rJi"/>
                             <constraint firstItem="rGs-5l-ZSF" firstAttribute="trailing" secondItem="l4e-KL-sTa" secondAttribute="trailing" constant="30" id="hc2-0u-YmM"/>
                             <constraint firstItem="OZs-Sg-5f1" firstAttribute="centerY" secondItem="ZrI-SF-drS" secondAttribute="centerY" id="jDc-C6-lNj"/>
+                            <constraint firstItem="rGs-5l-ZSF" firstAttribute="trailing" secondItem="O1i-IQ-pEf" secondAttribute="trailing" constant="30" id="kxk-0r-cQ0"/>
                             <constraint firstItem="l4e-KL-sTa" firstAttribute="leading" secondItem="rGs-5l-ZSF" secondAttribute="leading" constant="30" id="ubX-4d-dAi"/>
+                            <constraint firstItem="O1i-IQ-pEf" firstAttribute="top" secondItem="l4e-KL-sTa" secondAttribute="bottom" constant="30" id="ue0-7J-e9M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SecondVC" largeTitleDisplayMode="always" id="pk0-PW-hDC"/>
@@ -98,6 +145,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H92-ZE-3lQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fwg-et-4AC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1697" y="4"/>
         </scene>
